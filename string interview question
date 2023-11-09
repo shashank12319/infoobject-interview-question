@@ -1,0 +1,32 @@
+public class practice {
+	public static void main(String[] args) {
+		String input = "my name is shashank";
+		//olleh cool siht restro si
+		String[] words = input.split(" ");
+		
+		String result = new String();
+		int k = words.length - 1, i = 0;
+		
+		while(i <= k) {
+			int len = words[i].length();
+			String temp1 = words[i];
+			String temp = "";
+			for(int j= len - 1;j>=0 ;j--) {
+				temp += temp1.charAt(j); 
+			}
+			if(i != k)
+				result += " " + temp + " " + words[k];
+			else
+				result += " " + temp + " ";
+			i++;k--;
+		}
+		System.out.println(result);
+	}
+}
+
+
+input:my name is shashank
+output :ym shashank eman is
+You8:41 PM
+input :hello this is restro cool
+ouput: olleh cool siht restro si
